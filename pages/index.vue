@@ -1,5 +1,6 @@
 
 <template>
+
   <div>
     <div id="hedderImg">
     <v-row justify="center" class="pa-1 ma-2">
@@ -33,22 +34,49 @@
       </v-row>
     </div>  
     <div id="WorkDisp" class="pa-1">
-      <h3 class="black--text pa-1">Work</h3>
+      <u><h3 class="black--text">Work.</h3></u>
       <p class="black--text pa-1">His day job is as a data scientist. On the side, I am a private app developer.I manage a web media called "KIMURA LOG".</p>
       <v-row justify="center" class="pa-1 ma-2">
         <v-btn >
-          My portfolio > 
+          <a class="white--text" href="https://kimuralog.com/?p=60" target=”_blank”>My portfolio ></a>
         </v-btn>
       </v-row>
     </div>
-    <div id="BioDisp" class="pa-1">
-      <h3 class="black--text pa-1">Bio</h3>
-      <p class="black--text pa-1">His day job is as a data scientist. On the side, I am a private app developer.I manage a web media called "KIMURA LOG".</p>
+    <div id="BioDisp" class="pb-2">
+      <u><h3 class="black--text pb-4">Bio.</h3></u>
+       <v-row class="pl-2 pb-0">
+         <b class="black--text pl-5 pb-0">2014</b>
+         <p class="black--text pl-5 pb-0">Serverside Engineer/HR industry</p>
+       </v-row>
+       <v-row class="pl-2">
+         <b class="black--text pl-5 pb-0">2018</b>
+         <p class="black--text pl-5 pb-0">IT director/HR industry</p>
+       </v-row>
+       <v-row class="pl-2">
+         <b class="black--text pl-5 pb-0">2020</b>
+         <p class="black--text pl-5 pb-0">Data Engineer/Payment industry</p>
+       </v-row>
+    </div>
+    <div id="InterestsDisp" class="pa-1">
+      <u><h3 class="black--text">Interests.</h3></u>
+      <p class="black--text pa-1">Mathematics,Tennis,Machine learning,history of mankind</p>
+    </div>
+    <div id="MediaDisp" class="pa-1">
+      <u><h3 class="black--text pb-4">Media.</h3></u>
+       <v-row class="pl-2 pb-0">
+         <p class="black--text pl-5 pb-0">
+           <a href="https://twitter.com/kimura9438" target=”_blank”>Twitter</a>,
+           <a href="https://github.com/kimuson" target=”_blank”>GitHub</a>,
+           <a href="https://kimuralog.com/" target=”_blank”>Blog</a>,
+           </p>
+       </v-row>
+       
     </div>
   </div>
 </template>
 
 <script>
+
   export default {
     name: 'IndexPage',
     data () {

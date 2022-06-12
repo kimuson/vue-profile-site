@@ -1,23 +1,25 @@
 <template>
   <v-app dark>
     <v-app-bar
-      app
-      flat
+      :collapse="!collapseOnScroll"
+      :collapse-on-scroll="collapseOnScroll"
+      absolute
+      dark
+      scroll-target="#scrolling-techniques-6"
     >
-      <v-tabs
-        centered
-        class="ml-n9"
-        color="grey darken-1"
-      >
-        <v-tab
-          v-for="link in links"
-          :key="link"
-        >
-          {{ link }}
-        </v-tab>
-      </v-tabs>
-    </v-app-bar>
+      
 
+      <v-toolbar-title> Yuta Kimura</v-toolbar-title>
+
+      <v-spacer></v-spacer>
+
+      <v-checkbox
+        v-model="collapseOnScroll"
+        color="white"
+        hide-details
+      ></v-checkbox>
+    </v-app-bar>
+<v-spacer></v-spacer>
     <v-main class="grey lighten-3">
       <v-container>
         <v-row>
@@ -54,6 +56,7 @@
         'Posts',
         'Source',
       ],
+      collapseOnScroll: true,
       title: 'Yuta Kimura',
     }),
   }
