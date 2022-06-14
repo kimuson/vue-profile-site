@@ -1,5 +1,5 @@
 <template>
-  <v-app dark>
+  <v-app :dark="setTheme">
     <v-app-bar
       :collapse="!collapseOnScroll"
       :collapse-on-scroll="collapseOnScroll"
@@ -7,19 +7,26 @@
       dark
       scroll-target="#scrolling-techniques-6"
     >
-      
-
-      <v-toolbar-title> Yuta Kimura</v-toolbar-title>
-
+    
+      <v-toolbar-title>Yuta Kimura</v-toolbar-title>
+      <div class="pl-2">
+        <v-btn text>WORK</v-btn>
+        <v-btn text>POST</v-btn>
+        <v-btn text href="https://github.com/kimuson"><fa :icon="['fab', 'fa-github']" />&nbsp;SOURCE</v-btn>
+      </div>
       <v-spacer></v-spacer>
-
-      <v-checkbox
-        v-model="collapseOnScroll"
-        color="white"
-        hide-details
-      ></v-checkbox>
+      <template v-if="goDark">
+        <v-btn text @click="changeThema()">
+        <fa :icon="['fas', 'fa-sun']" />
+        </v-btn>
+      </template>
+      <template v-else>
+        <v-btn text @click="changeThema()">
+        <fa :icon="['fas', 'fa-moon']" />
+        </v-btn>
+      </template>
     </v-app-bar>
-<v-spacer></v-spacer>
+    <v-spacer></v-spacer>
     <v-main class="grey lighten-3">
       <v-container>
         <v-row>
@@ -47,9 +54,11 @@
 </template>
 
 <script>
+
   export default {
     name: 'DefaultLayout',
     data: () => ({
+      goDark: false,
       links: [
         'Profile',
         'Works',
@@ -59,5 +68,21 @@
       collapseOnScroll: true,
       title: 'Yuta Kimura',
     }),
+    methods: {
+    changeThema: function() {
+        console.log('AAAAAAAAAAAAAAAAAAAAA');
+        console.log(this.goDark);
+        this.goDark=!this.goDark
+    }
+  },
+    computed: {
+        setTheme() {
+            if (this.goDark == true) {
+                return (this.$vuetify.theme.dark = true);
+            } else {
+                return (this.$vuetify.theme.dark = false);
+            }
+        }
+    }
   }
 </script>

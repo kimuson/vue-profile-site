@@ -1,6 +1,5 @@
 
 <template>
-
   <div>
     <div id="hedderImg">
     <v-row justify="center" class="pa-1 ma-2">
@@ -65,9 +64,9 @@
       <u><h3 class="black--text pb-4">Media.</h3></u>
        <v-row class="pl-2 pb-0">
          <p class="black--text pl-5 pb-0">
-           <a href="https://twitter.com/kimura9438" target=”_blank”>Twitter</a>,
-           <a href="https://github.com/kimuson" target=”_blank”>GitHub</a>,
-           <a href="https://kimuralog.com/" target=”_blank”>Blog</a>,
+           <v-btn text href="https://github.com/kimuson"><fa :icon="['fab', 'fa-github']" />&nbsp;@kimuson</v-btn>
+           <v-btn text href="https://twitter.com/kimura9438"><fa :icon="['fab', 'fa-twitter']" />&nbsp;@kimura9438</v-btn>
+           <v-btn text href="https://bit.ly/3xqHx5n"><fa :icon="['fas', 'fa-blog']" />&nbsp;kimuralog.com</v-btn>
            </p>
        </v-row>
        
