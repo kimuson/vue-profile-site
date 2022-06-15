@@ -1,13 +1,11 @@
 <template>
-  <v-app :dark="setTheme">
+  <v-app>
     <v-app-bar
       :collapse="!collapseOnScroll"
       :collapse-on-scroll="collapseOnScroll"
       absolute
-      dark
       scroll-target="#scrolling-techniques-6"
     >
-    
       <v-toolbar-title>Yuta Kimura</v-toolbar-title>
       <div class="pl-2">
         <v-btn text>WORK</v-btn>
@@ -27,7 +25,7 @@
       </template>
     </v-app-bar>
     <v-spacer></v-spacer>
-    <v-main class="grey lighten-3">
+    <v-main>
       <v-container>
         <v-row>
           <v-col
@@ -70,7 +68,6 @@
     }),
     methods: {
     changeThema: function() {
-        console.log('AAAAAAAAAAAAAAAAAAAAA');
         console.log(this.goDark);
         this.goDark=!this.goDark
     }
@@ -83,6 +80,12 @@
                 return (this.$vuetify.theme.dark = false);
             }
         }
+    },
+    watch: {
+    goDark() {
+      this.$vuetify.theme.dark = this.goDark
     }
+  },
+    
   }
 </script>
