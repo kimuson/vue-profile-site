@@ -10,8 +10,6 @@ jobs:
     runs-on: ubuntu-18.04
     env:
       RESAS_API_KEY:  ${{ secrets.RESAS_API_KEY }}
-
-
     steps:
       - uses: actions/checkout@v2
 
