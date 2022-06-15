@@ -1,9 +1,11 @@
 <template>
   <v-app>
+
     <v-app-bar
       :collapse="!collapseOnScroll"
       :collapse-on-scroll="collapseOnScroll"
       absolute
+      dark app
       scroll-target="#scrolling-techniques-6"
     >
       <v-toolbar-title>Yuta Kimura</v-toolbar-title>
@@ -24,6 +26,9 @@
         </v-btn>
       </template>
     </v-app-bar>
+
+
+
     <v-spacer></v-spacer>
     <v-main>
       <v-container>
@@ -48,6 +53,14 @@
         </v-row>
       </v-container>
     </v-main>
+      <v-footer padless>
+    <v-col
+      class="text-center"
+      cols="12"
+    >
+      {{ new Date().getFullYear() }} — <strong>Create by Yuta Kimura</strong>
+    </v-col>
+  </v-footer>
   </v-app>
 </template>
 
