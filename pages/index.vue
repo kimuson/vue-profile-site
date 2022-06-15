@@ -14,7 +14,7 @@
     </v-row>
     </div>
     <div id="hedderMsg">
-      <v-alert class="text-center">I'm Yuta! Wellcom to my portfolio page!</v-alert>
+      <v-alert class="text-center">Hi! I'm Yuta! Wellcom to my portfolio page!</v-alert>
     </div>
     <div id="profileCard">
       <v-row justify="space-around" class="pa-5">
