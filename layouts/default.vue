@@ -56,7 +56,7 @@
   export default {
     name: 'DefaultLayout',
     data: () => ({
-      goDark: false,
+      goDark: true,
       links: [
         'Profile',
         'Works',
