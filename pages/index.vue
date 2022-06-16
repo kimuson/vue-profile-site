@@ -1,16 +1,8 @@
-
 <template>
   <div>
     <div id="hedderImg">
     <v-row justify="center" class="pa-1 ma-2">
-      <v-img
-        contain
-        lazy-src="https://picsum.photos/id/11/10/6"
-        max-height="300"
-        max-width="500"
-        src="https://picsum.photos/id/11/500/300"
-      >
-      </v-img>
+      <DrawGraphics max-height="300" max-width="500"/>
     </v-row>
     </div>
     <div id="hedderMsg">

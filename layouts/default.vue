@@ -8,11 +8,12 @@
       dark app
       scroll-target="#scrolling-techniques-6"
     >
+    <v-app-bar-nav-icon @click="drawer = true" v-if="$vuetify.breakpoint.xs"></v-app-bar-nav-icon>
       <v-toolbar-title>Yuta Kimura</v-toolbar-title>
       <div class="pl-2">
-        <v-btn text>WORK</v-btn>
-        <v-btn text>POST</v-btn>
-        <v-btn text href="https://github.com/kimuson"><fa :icon="['fab', 'fa-github']" />&nbsp;SOURCE</v-btn>
+        <v-btn text v-if="!$vuetify.breakpoint.xs">WORK</v-btn>
+        <v-btn text v-if="!$vuetify.breakpoint.xs">POST</v-btn>
+        <v-btn text href="https://github.com/kimuson" v-if="!$vuetify.breakpoint.xs"><fa :icon="['fab', 'fa-github']" />&nbsp;SOURCE</v-btn>
       </div>
       <v-spacer></v-spacer>
       <template v-if="goDark">
@@ -25,11 +26,37 @@
         <fa :icon="['fas', 'fa-moon']" />
         </v-btn>
       </template>
+      
     </v-app-bar>
+     <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      temporary
+    >
+      <v-list
+        nav
+        dense
+      >
+        <v-list-item-group
+          v-model="group"
+          active-class="deep-purple--text text--accent-4"
+        >
+          <v-list-item>
+            <v-list-item-title>WORK</v-list-item-title>
+          </v-list-item>
 
+          <v-list-item>
+            <v-list-item-title>POST</v-list-item-title>
+          </v-list-item>
 
+          <v-list-item>
+            <v-list-item-title ><a href="https://github.com/kimuson" style="cursor:default;color:inherit;text-decoration:none;">SOURCE</a></v-list-item-title>
+          </v-list-item>
+          
+        </v-list-item-group>
+      </v-list>
+    </v-navigation-drawer>
 
-    <v-spacer></v-spacer>
     <v-main>
       <v-container>
         <v-row>
@@ -69,6 +96,8 @@
   export default {
     name: 'DefaultLayout',
     data: () => ({
+      drawer: false,
+      group: null,
       goDark: true,
       links: [
         'Profile',
