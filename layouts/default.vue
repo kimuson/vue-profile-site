@@ -9,10 +9,10 @@
       scroll-target="#scrolling-techniques-6"
     >
     <v-app-bar-nav-icon @click="drawer = true" v-if="$vuetify.breakpoint.xs"></v-app-bar-nav-icon>
-      <v-toolbar-title>Yuta Kimura</v-toolbar-title>
+      <v-toolbar-title><nuxt-link to="/" class="c-p" tag="div">Yuta Kimura</nuxt-link></v-toolbar-title>
       <div class="pl-2">
-        <v-btn text v-if="!$vuetify.breakpoint.xs">WORK</v-btn>
-        <v-btn text v-if="!$vuetify.breakpoint.xs">POST</v-btn>
+        <v-btn text v-if="!$vuetify.breakpoint.xs" to="/work" nuxt>WORK</v-btn>
+        <v-btn text v-if="!$vuetify.breakpoint.xs" to="/post" post>POST</v-btn>
         <v-btn text href="https://github.com/kimuson" v-if="!$vuetify.breakpoint.xs"><fa :icon="['fab', 'fa-github']" />&nbsp;SOURCE</v-btn>
       </div>
       <v-spacer></v-spacer>
@@ -42,11 +42,11 @@
           active-class="deep-purple--text text--accent-4"
         >
           <v-list-item>
-            <v-list-item-title>WORK</v-list-item-title>
+            <v-list-item-title><nuxt-link to="work" class="c-p" tag="div">WORK</nuxt-link></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
-            <v-list-item-title>POST</v-list-item-title>
+            <v-list-item-title><nuxt-link to="post" class="c-p" tag="div">POST</nuxt-link></v-list-item-title>
           </v-list-item>
 
           <v-list-item>
@@ -131,3 +131,8 @@
     
   }
 </script>
+<style>
+.c-p {
+  cursor: pointer;
+}
+</style>
