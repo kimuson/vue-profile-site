@@ -13,7 +13,7 @@
       <div class="pl-2">
         <v-btn text v-if="!$vuetify.breakpoint.xs" to="/work" nuxt>WORK</v-btn>
         <v-btn text v-if="!$vuetify.breakpoint.xs" to="/post" post>POST</v-btn>
-        <v-btn text href="https://github.com/kimuson" v-if="!$vuetify.breakpoint.xs"><fa :icon="['fab', 'fa-github']" />&nbsp;SOURCE</v-btn>
+        <v-btn text href="https://github.com/kimuson/vue-profile-site/settings/secrets/actions" v-if="!$vuetify.breakpoint.xs"><fa :icon="['fab', 'fa-github']" />&nbsp;SOURCE</v-btn>
       </div>
       <v-spacer></v-spacer>
       <template v-if="goDark">
